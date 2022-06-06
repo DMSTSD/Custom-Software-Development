@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sanmark - Custom Software Development</title>
+    <link rel="shortcut icon" href="img/Logo-icon.png" type="image/x-icon">
+    <link rel="icon" href="img/Logo-icon.png" type="image/x-icon">
+    <link href="toastr.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
+
+    <!-- PhoneNumber -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <!-- PhoneNumber -->
+
+    <!-- Bootstrap Core CSS -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> 
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/simple-line-icons/css/simple-line-icons.css">
+
+    <!-- Preloader CSS -->
+    <link rel="stylesheet" href="css/preloader.css">
+
+    <!-- Custom CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- Responsive CSS -->
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Google reCAPTCHA v3 -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <!-- Google reCAPTCHA v3 -->
+
+
+</head>
+
+<body id="page-top">
+
+    <!-- Preloader -->
+    <div id="preloader"> 
+        <div id="wave"></div>
+    </div>
+    <div id="mask"></div>
+    <!-- End Of Preloader -->
+
+    <!-- NavBar -->
+    <!-- <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container"> -->
+            <!-- Brand Logo -->
+            <!-- <div class="navbar-header">
+                <a class="navbar-brand page-scroll" href="https://sanmark.lk/" target="_blank">
+                    <img src="img/Sanmark_logo.png" alt="LOGO">
+                </a>
+            </div> -->
+
+            <!-- Social Link -->
+            <!-- <div class="social_link">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="" href="https://www.facebook.com/Sanmark.lk" target="_blank"><i class="icon-social-facebook" ></i></a>
+                    </li>
+                    <li>
+                        <a class="" href="https://twitter.com/sanmarklk" target="_blank"><i class="icon-social-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a class="" href="https://www.linkedin.com/company/sanmark-solutions/" target="_blank"><i class="icon-social-linkedin"></i></a>
+                    </li>
+                    <li>
+                        <a class="" href="https://www.instagram.com/sanmarklk/" target="_blank"><i class="icon-social-instagram"></i></a>
+                    </li>
+                </ul>
+            </div> -->
+        </div>
+    </nav>
+    <!-- End Of Nav Bar -->
+
+
+    <!-- Header -->
+    <header id="page_top" class="car_loan">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="header-content">
+                        <div class="header-content-inner">
+                            <h1>Custom Built Software Serves Their Purpose Better</h1>
+                            <p>One size doesn't fit all, when it comes to software. Best solutions are the ones made just for you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="form-container">
+                        <div class="form-mockup">
+                            <h2>Contact Us Now</h2>
+                            <h4>Why blend with the rest when you can get your own software!</h4>
+                            <form action="lead.php" method="post" id="letstalk_form" >
+                              <div class="form-group">
+                                <input type="text" id="contactName" name="name" class="form-control" placeholder="Your Name" required>
+                                <small id="contactNameError" class="text-danger"></small>
+                              </div>
+                              <div class="form-group">
+                                <input id="phone" type="tel" name="phone" class="form-control" placeholder="Phone Number" required>
+                                <small id="telError" class="text-danger"></small>
+                              </div>
+                              <div class="form-group">
+                                <input type="email" name="email" id="contactEmail" class="form-control" placeholder="Your Email" required>
+                                <small id="contactEmailError" class="text-danger"></small>
+                              </div>
+                              <!-- <button type="button" onclick="process(event)" class="btn btn-default quote_btn">Let's Talk</button> -->
+                              <button type="button" class="btn btn-default quote_btn g-recaptcha" id="lead-form" onclick="process(event)"
+                              data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" 
+                              data-callback='process' >Let's Talk</button>
+                            </form>
+                            <!-- <div class="alert alert-info" style="display: none;"></div>
+                            <div class="alert alert-error" style="display: none;"></div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <!-- End Of Header -->
+
+    <!-- Section Sanmark Principles -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-heading">
+                        <h2>Reason to Choose Us</h2>
+                        <p class="text-muted">We offer fully featured custom software solutions fully tailored to the needs of your business. We always focus on quality, timely delivery and budget friendly solutions to make sure you get exactly what you need under your budget limits.  </p>
+                        <hr>
+                        <br>
+                        <div class="sn-text"><h2>Sanmark Principles</h2></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <img src="./img/Optimized-icons-images/Affordability.png" alt="Affordability">
+                                    <h3>Affordability</h3>
+                                    <p class="text-muted">Compared to the software development companies in first-world, our costs are lower and our quality is top notch. </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <img src="./img/Optimized-icons-images/Quality.png" alt="Quality">
+                                    <h3>Quality</h3>
+                                    <p class="text-muted">Our software has exceeded customer satisfaction every time with high quality solutions. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <img src="./img/Optimized-icons-images/Reusability.png" alt="Reusability">
+                                    <h3>Reusability</h3>
+                                    <p class="text-muted">We can make it possible to reuse our software for similar requirements you might have. </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-item last-one">
+                                    <img src="./img/Optimized-icons-images/Flexibility.png" alt="Flexibility">
+                                    <h3>Flexibility</h3>
+                                    <p class="text-muted">Businesses evolve everyday, and so does their requirements. Our software are flexible enough for them. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <img src="./img/Optimized-icons-images/Maintainability.png" alt="Maintainability">
+                                    <h3>Maintainability</h3>
+                                    <p class="text-muted">Our software are easy to maintain, making it one less thing to worry about in your life. </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-item last-one">
+                                    <img src="./img/Optimized-icons-images/Reliability.png" alt="Reliability">
+                                    <h3>Reliability</h3>
+                                    <p class="text-muted">Many businesses run on critical software we developed. You can depend on our software. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <img src="./img/Optimized-icons-images/Efficiency.png" alt="Efficiency">
+                                    <h3>Efficiency</h3>
+                                    <p class="text-muted">Our software saves time, money, and energy. Our development teams are also highly efficient. </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-item last-one">
+                                    <img src="./img/Optimized-icons-images/Latest-Technologies.png" alt="Latest Technologies">
+                                    <h3>Latest Technologies</h3>
+                                    <p class="text-muted">We are always on the lookout for latest and greatest technology in order to make sure our customers get the best. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Of Section Sanmark Principles -->
+
+    <!-- Section About And Counter -->
+    <section id="about" class="about text-center" style="background:#fff">
+        <div class="container">
+            <div class="row">
+                <div class="main_counter_content text-center white-text wow fadeInUp">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single_counter">
+                            <p class="counter_icon"><i class="icon-check"></i></p>
+                            <span class="counter">500</span>+
+                            <p>PROJECT FINISHED</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single_counter">
+                            <p class="counter_icon"><i class="icon-check" aria-hidden="true"></i></p>
+                            <span class="counter">400</span>+
+                            <p>SATISFIED CUSTOMERS</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single_counter">
+                            <p class="counter_icon"><i class="icon-check"></i></p>
+                            <span class="counter">10</span>
+                            <p>COUNTRIES SERVED</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single_counter">
+                            <p class="counter_icon"><i class="icon-check"></i></p>
+                            <span class="counter">12</span>
+                            <p>YEARS IN BUSINESS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </section> 
+    <!-- End Section Of About And Counter -->
+
+
+    <!-- Sanmark process image area -->
+    <div class="container">
+        <div class="row sn-process">
+            <div class="section-heading text-center">
+                <h2 >Sanmark Process</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 sn-process">
+                <a href="#"><img class="img-fluid" src="img/Sanmark-Process.jpg" alt="Sanmark Team" width="1170px" height="800px"></a>
+            </div>
+        </div>
+    </div> 
+    <!-- Sanmark process image area -->
+
+
+    <!-- Sanmark Technologies area -->
+    <section id="agents" class="agents text-center">
+        <div class="agents_contain">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <h2 class="section-heading">Sanmark Technologies</h2>
+                    </div>
+                    <div class="row" style="margin-right:0 !important; margin-left: 0 !important;">
+                        <div class="col">
+                            <div class="sn-slider">
+                                <div class="sn-slide-track">
+                                  <div class="sn-slide">
+                                    <img src="./img/Technologies/Amazon-Web-Services-01.png" height="150" width="150" alt="Amazon Web Services" />
+                                  </div>
+                                  <div class="sn-slide">
+                                    <img src="./img/Technologies/Angular.png" height="150" width="150" alt="Angular" />
+                                  </div>
+                                  <div class="sn-slide">
+                                    <img src="./img/Technologies/Dart-01.png" height="150" width="150" alt="Dart Programming Language" />
+                                  </div>
+                                  <div class="sn-slide">
+                                    <img src="./img/Technologies/DigitalOcean-01.png" height="150" width="150" alt="DigitalOcean" />
+                                  </div>
+                                  <div class="sn-slide">
+                                    <img src="./img/Technologies/Docker.png" height="150" width="150" alt="Docker" />
+                                  </div>
+                                  <div class="sn-slide">
+                                    <img src="./img/Technologies/Flutter.png" height="150" width="150" alt="Flutter" />
+                                  </div>
+                                  <div class="sn-slide">
+                                    <img src="./img/Technologies/Git.png" height="150" width="150" alt="Git" />
+                                  </div>
+                                  <div class="sn-slide">
+                                    <img src="./img/Technologies/Java-Script-01.png" height="150" width="150" alt="JavaScript" />
+                                  </div>
+                                  <div class="sn-slide">
+                                    <img src="./img/Technologies/Laravel.png" height="150" width="150" alt="Laravel" />
+                                  </div>
+                                  <div class="sn-slide">
+                                    <img src="./img/Technologies/Livewire.png" height="150" width="150" alt="Livewire" />
+                                  </div>
+                                  <div class="sn-slide">
+                                    <img src="./img/Technologies/Php-01.png" height="150" width="150" alt="php" />
+                                  </div>
+                                  <div class="sn-slide">
+                                    <img src="./img/Technologies/Scrum-01.png" height="150" width="150" alt="Scrum Software Development" />
+                                  </div>
+                                  <div class="sn-slide">
+                                    <img src="./img/Technologies/Vue.js.png" height="150" width="150" alt="Vue.js" />
+                                  </div>
+                                  
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    <div>
+                        <br><br>
+                        <p class="aagents_p">Disclaimer: These logos are displayed here for informative purposes only. Sanmark does not have affiliations with these organizations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sanmark Technologies area -->
+
+    <!-- Section Testimonials -->
+    <section id="testimonials" class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="section-title text-center">Sanmark Happiness</h2>
+                    <p class="testimonials_p">What our clients say about us.</p>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="testimonials-list">
+                    
+                <!-- Single Testimonial -->  
+                        <div class="single-testimonial">
+                            <div class="testimonial-holder">
+                                <div class="testimonial-content">With words we can't express our appreciation for all the help and advice the Sanmark team has given us. The best thing was that they understood why we wanted things done in our specific way. The sanmark team did their best and has now made us a very satisfied customer.
+                                </div>
+                                <div class="row">
+                                    <div class="testimonial-user clearfix">
+                                        <div class="testimonial-user-image"><img src="img/clients/tivon.jpg" alt=""></div>
+                                        <div class="testimonial-user-name">Tivon Prasad <br><p>Tourism Directory</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Single Testimonial -->  
+                <div class="col-md-6">
+                    <div class="testimonials-list">       
+                        <!-- Single Testimonial -->  
+                        <div class="single-testimonial">
+                            <div class="testimonial-holder">
+                                <div class="testimonial-content">The team at Sanmark have been a key part of the recent success and growth of Engaging.io. The development team are very well skilled, conscientious and have the ability to think holistically when problem solving. I can thoroughly recommend Sanmark.
+                                </div>
+                                <div class="row">
+                                    <div class="testimonial-user clearfix">
+                                        <div class="testimonial-user-image"><img src="img/clients/Geff-Harper.jpg" alt=""></div>
+                                        <div class="testimonial-user-name">Geff Harper<br><p>Head of UX & Design, Engaging.io</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of Single Testimonial -->  
+                    </div>
+                </div>
+            </div>     
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="testimonials-list">
+
+                         <!-- Single Testimonial -->  
+                        <div class="single-testimonial">
+                            <div class="testimonial-holder">
+                                <div class="testimonial-content">I am very happy that I decided to use Sanmark for our web development. They produced excellent standard of work within the agreed time scale. It was an absolute pleasure to work with them.
+                                </div>
+                                <div class="row">
+                                    <div class="testimonial-user clearfix">
+                                        <div class="testimonial-user-image"><img src="img/clients/indika.jpg" alt=""></div>
+                                        <div class="testimonial-user-name">Indika Gunawardena <br><p>Visit Colombo</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        <!-- End of Single Testimonial -->  
+                <div class="col-md-6">
+                    <div class="testimonials-list">        
+                        <!-- Single Testimonial -->  
+                        <div class="single-testimonial">
+                            <div class="testimonial-holder">
+                                <div class="testimonial-content">I can recommend the Sanmark. Because They have great deal of creativity, quality, punctuality, flexibility, reliability which always brings value for your money.
+                                </div>
+                                <div class="row">
+                                    <div class="testimonial-user clearfix">
+                                        <div class="testimonial-user-image"><img src="img/clients/chaminda.jpg" alt=""></div>
+                                        <div class="testimonial-user-name">Chaminda <br><p>Sri Lanka Chamo Tours</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of Single Testimonial -->  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Of Section Testimonials -->
+    
+    <!-- Section Sanmark Team -->
+    <section id="brand_logo" style="background:#fff">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="setion-title text-center">Sanmark Team</h2>
+                    <p class="text-muted">A happy team is a productive team. We always make sure that our team is equipped with up-to date skills and has a good work-life balance. We do that by regular events, trips, and knowledge improvement programs. The goal is always providing the best results to our customers.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <img class="img-fluid" src="img/Sanmark-Team.jpg" alt="Sanmark Team" width="1170px" height="800px">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Of Section Sanmark Team -->
+
+    <!-- Section -->
+    <section id="Social" class="social_contact" style="background:#F1F1F1; padding: 50px 0 50px 0;">
+        <div class="container">
+            <div class="row">
+                <h2>Sanmark is Ready to Develop Your Custom Software</h2>
+                <div class="tab-content custom-tab-content">
+                    <div class="subscribe-panel">
+                        <p>Getting a fully customized business software done for your business is often dismissed by many companies due to the high costs most software companies quote for this task. However, with Sanmark, you get the best of both worlds by having a well experienced set of software developers working on your project for an extremely competitive and affordable cost from your end.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Of Section -->
+
+    <!-- Section Sanmark Logo -->
+    <div class="container">
+        <div class="sn-logo-section" style="background:#fff">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-center">
+                        <img src="./img/Sanmark_logo_black.png" class="img-fluid" alt="Sanmark Solutions">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="text-center sn-logo list-inline">
+                    <a href="https://sanmark.lk/" target="_blank">Learn more at our website...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Section Sanmark Logo -->
+
+    <!-- Section Contact -->
+    <section id="contact">
+        <h2 id="dev-snippet-title" class="text-center">Contact Us</h2>
+        <div class="container mr_top_10">
+            <div class="row">
+                <div class="col-lg-7 col-md-6 col-sm-6" style="padding-top: 22px;">
+                    <form action="mailer.php" method="post" >
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Name" required>
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="InputPhone" name="InputPhone" placeholder="Enter Phone Number" required>
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+                            </div>
+                        </div> -->
+
+                        <!-- <div class="form-group">
+                            <div class="input-group">
+                                <input type="tel" class="form-control" id="contact-phone" name="phone" placeholder="Enter Phone Number"  required>
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+                            </div>
+                        </div> -->
+
+                        <div class="form-group ">
+                            <input type="tel" class="form-control" id="contact-phone" name="phone" placeholder="Enter Phone Number"  required>
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+                        </div>
+
+
+                        
+                        <!-- <div class="form-group">
+                            <input id="contact-phone" type="tel" name="contact-phone" class="form-control" placeholder="Phone Number" required>
+                            
+                            <small id="telError" class="text-danger"></small>
+                        </div> -->
+
+
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Enter Email" required>
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" placeholder="Type Message Text" required></textarea>
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-outline btn-xl page-scroll pull-right sn-submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-4 col-md-5 col-sm-6 col-md-offset-1">
+                    <address>
+                        <p class="address_icon"><i class="icon-home"></i></p>
+                        <p class="lead">Office Location</p>
+                        <p class="lead"><i class="icon-location-pin"></i> Ranawiru Mw., Kahatapitiya, Batapola, <br> Galle, Sri Lanka. 80320.</p>
+                        <p class="lead"><i class="icon-screen-smartphone"></i> Phone: (+94) 71 601 2109</p>
+                        <p class="lead"><i class="icon-envelope-open"></i> Email: work@thesanmark.com</p>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Of Section Contact -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-fluid" style="padding-left: 0 !important;padding-right: 0 !important;">
+            <p>&copy; 2022 Sanmark Solutions PVT LTD. All Rights Reserved.</p>
+            <ul class="list-inline">
+                <li>
+                    <a href="https://sanmark.lk/privacy-policy/ " target="_blank">Privacy</a>
+                </li>
+            </ul>
+            <div class="text-center">
+                <div class="btn-credit">
+                    <p style="padding-bottom: 15px;">
+                        <a class="list-inline"  data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                          Credits
+                        </a>
+                    </p>
+                </div>
+                <div class="collapse" id="collapseExample" style="background: white;padding-top: 10px;padding-bottom: 20px;margin: 0;">
+                    <div class="card card-body sn-credits">
+                      <div class="container">
+                          <div class="row">
+                            <div class="col">
+                                <div class="text-center text-muted Credits-links">
+                                    <center>
+                                        <ul>
+                                            <li>
+                                                <a href="https://www.pexels.com/photo/tailor-man-measuring-the-man-6765071/" target="_blank">https://www.pexels.com/photo/tailor-man-measuring-the-man-6765071/</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.flaticon.com/premium-icon/money_3130453?term=affordable&page=1&position=4&page=1&position=4&related_id=3130453&origin=search" target="_blank">https://www.flaticon.com/premium-icon/money_3130453?term=affordable&page=1&position=4&page=1&position=4&related_id=3130453&origin=search</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.flaticon.com/free-icon/medal_1851036?term=quality&page=1&position=6&page=1&position=6&related_id=1851036&origin=search" target="_blank">https://www.flaticon.com/free-icon/medal_1851036?term=quality&page=1&position=6&page=1&position=6&related_id=1851036&origin=search</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.flaticon.com/free-icon/reusable_2959558?term=reusability&page=1&position=1&page=1&position=1&related_id=2959558&origin=search" target="_blank">https://www.flaticon.com/free-icon/reusable_2959558?term=reusability&page=1&position=1&page=1&position=1&related_id=2959558&origin=search</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.flaticon.com/free-icon/turn_854959?term=flexibility&page=1&position=1&page=1&position=1&related_id=854959&origin=search" target="_blank">https://www.flaticon.com/free-icon/turn_854959?term=flexibility&page=1&position=1&page=1&position=1&related_id=854959&origin=search</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.flaticon.com/free-icon/reliability_4371446?term=reliability&page=1&position=3&page=1&position=3&related_id=4371446&origin=search" target="_blank">https://www.flaticon.com/free-icon/reliability_4371446?term=reliability&page=1&position=3&page=1&position=3&related_id=4371446&origin=search</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.flaticon.com/free-icon/statistics_1459104?term=efficiency&page=1&position=5&page=1&position=5&related_id=1459104&origin=search" target="_blank">https://www.flaticon.com/free-icon/statistics_1459104?term=efficiency&page=1&position=5&page=1&position=5&related_id=1459104&origin=search</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.flaticon.com/free-icon/data-management_2920249?term=technology&page=1&position=3&page=1&position=3&related_id=2920249&origin=search" target="_blank">https://www.flaticon.com/free-icon/data-management_2920249?term=technology&page=1&position=3&page=1&position=3&related_id=2920249&origin=search</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.flaticon.com/free-icon/clipboards_616948?term=clipboard&page=1&position=31&page=1&position=31&related_id=616948&origin=search" target="_blank">https://www.flaticon.com/free-icon/clipboards_616948?term=clipboard&page=1&position=31&page=1&position=31&related_id=616948&origin=search</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.flaticon.com/free-icon/google-docs_2991112?term=document&page=1&position=6&page=1&position=6&related_id=2991112&origin=search" target="_blank">https://www.flaticon.com/free-icon/google-docs_2991112?term=document&page=1&position=6&page=1&position=6&related_id=2991112&origin=search</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.flaticon.com/free-icon/sketch_681662?related_id=681662&origin=search" target="_blank">https://www.flaticon.com/free-icon/sketch_681662?related_id=681662&origin=search</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.flaticon.com/free-icon/bricks_4634983?term=trowel&page=1&position=24&page=1&position=24&related_id=4634983&origin=search" target="_blank">https://www.flaticon.com/free-icon/bricks_4634983?term=trowel&page=1&position=24&page=1&position=24&related_id=4634983&origin=search</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.flaticon.com/free-icon/investigation_4087781?term=review&page=1&position=73&page=1&position=73&related_id=4087781&origin=search" target="_blank">https://www.flaticon.com/free-icon/investigation_4087781?term=review&page=1&position=73&page=1&position=73&related_id=4087781&origin=search</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.flaticon.com/free-icon/conversation_3050431?term=discuss&page=1&position=6&page=1&position=6&related_id=3050431&origin=search" target="_blank">https://www.flaticon.com/free-icon/conversation_3050431?term=discuss&page=1&position=6&page=1&position=6&related_id=3050431&origin=search</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.flaticon.com/free-icon/file_2521536?term=completed&page=1&position=21&page=1&position=21&related_id=2521536&origin=search" target="_blank">https://www.flaticon.com/free-icon/file_2521536?term=completed&page=1&position=21&page=1&position=21&related_id=2521536&origin=search</a>
+                                            </li>
+                                          </ul>
+                                    </center>
+                                  </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Of Footer -->
+
+    <!-- jQuery -->
+    <script src="assets/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.js"></script>
+    <script src="js/jquery.counterup.js"></script>
+    <script src="js/jquery.waypoints.js"></script>
+    <script src="js/price.slider.js"></script>
+    <script src="js/phone.js"></script>
+        
+
+    <!-- Theme JavaScript -->
+    <script src="js/custom.js"></script>
+    <script src="js/testimonials.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDgI2pfq_vtH_hOyGMZ7WM2PGcP72VJbYw"></script>
+    
+
+
+</body>
+
+</html>
+ 
